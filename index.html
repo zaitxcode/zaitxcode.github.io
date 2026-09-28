@@ -5,10 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZaitXCode — Software Development & Engineering Services</title>
   <meta name="description" content="ZaitXCode is a software engineering agency specializing in custom mobile applications, enterprise SDKs, cloud backend solutions, and software development services.">
+  <meta name="theme-color" content="#090d16">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossOrigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('zaitxcode-theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -21,14 +35,21 @@
 
     <ul class="nav-links">
       <li><a href="#services" class="nav-link">Services</a></li>
-      <li><a href="https://docs.zaitxcode.com" target="_blank" class="nav-link">Documentation Portal</a></li>
+      <li><a href="https://docs.zaitxcode.com" target="_blank" rel="noopener" class="nav-link">Documentation Portal</a></li>
       <li><a href="#contact" class="nav-link">Contact Us</a></li>
     </ul>
 
-    <a href="#contact" class="nav-cta">
-      <span>Get in Touch</span>
-      <i class="bi bi-arrow-right"></i>
-    </a>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">
+        <i class="bi bi-sun-fill sun-icon" aria-hidden="true"></i>
+        <i class="bi bi-moon-stars-fill moon-icon" aria-hidden="true"></i>
+      </button>
+
+      <a href="#contact" class="nav-cta">
+        <span>Get in Touch</span>
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
   </header>
 
   <!-- Container -->
@@ -36,25 +57,30 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="badge-pill">
+      <div class="hero-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+      </div>
+
+      <div class="badge-pill" data-reveal>
         <span class="dot-green"></span>
         <span>Software Engineering &amp; Development Services</span>
       </div>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-reveal data-delay="80">
         We Build High-Performance<br>Custom Software &amp; Applications.
       </h1>
 
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-reveal data-delay="160">
         ZaitXCode provides end-to-end software development services — from enterprise mobile applications (Android &amp; iOS/Flutter) to custom SDKs, backend APIs, and secure cloud infrastructure.
       </p>
 
-      <div class="hero-actions">
+      <div class="hero-actions" data-reveal data-delay="240">
         <a href="mailto:contact@zaitxcode.com?subject=Project%20Inquiry%20-%20ZaitXCode" class="btn-primary">
           <i class="bi bi-send-fill"></i>
           <span>Request Custom Software Development</span>
         </a>
-        <a href="https://docs.zaitxcode.com" target="_blank" class="btn-secondary">
+        <a href="https://docs.zaitxcode.com" target="_blank" rel="noopener" class="btn-secondary">
           <i class="bi bi-book-half"></i>
           <span>Developer Docs Portal →</span>
         </a>
@@ -63,14 +89,14 @@
 
     <!-- Services Grid -->
     <section id="services" class="section">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <span class="section-tag">What We Do</span>
         <h2 class="section-title">End-to-End Software Engineering</h2>
       </div>
 
       <div class="grid-3">
         <!-- Service 1 -->
-        <div class="feature-card">
+        <div class="feature-card" data-tilt="9" data-reveal data-delay="0">
           <div class="feature-icon"><i class="bi bi-phone-fill"></i></div>
           <h3 class="feature-title">Custom Mobile Applications</h3>
           <p class="feature-desc">
@@ -79,7 +105,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="feature-card">
+        <div class="feature-card" data-tilt="9" data-reveal data-delay="90">
           <div class="feature-icon"><i class="bi bi-code-slash"></i></div>
           <h3 class="feature-title">Custom SDKs &amp; Libraries</h3>
           <p class="feature-desc">
@@ -88,7 +114,7 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="feature-card">
+        <div class="feature-card" data-tilt="9" data-reveal data-delay="180">
           <div class="feature-icon"><i class="bi bi-cloud-check-fill"></i></div>
           <h3 class="feature-title">Cloud Backends &amp; APIs</h3>
           <p class="feature-desc">
@@ -100,9 +126,9 @@
 
     <!-- Contact & Project Inquiries Section -->
     <section id="contact" class="section">
-      <div class="contact-card">
-        <div className="contact-badge">
-          <i className="bi bi-chat-left-dots-fill"></i> Start a Project
+      <div class="contact-card" data-tilt="5" data-reveal>
+        <div class="contact-badge">
+          <i class="bi bi-chat-left-dots-fill"></i> Start a Project
         </div>
         <h2 class="contact-title">Have a Software Project in Mind?</h2>
         <p class="contact-desc">
@@ -110,11 +136,11 @@
         </p>
 
         <div class="contact-email-box">
-          <i class="bi bi-envelope-at-fill" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
+          <i class="bi bi-envelope-at-fill"></i>
           <span class="email-text">contact@zaitxcode.com</span>
         </div>
 
-        <a href="mailto:contact@zaitxcode.com?subject=Project%20Inquiry%20-%20ZaitXCode" class="btn-primary" style="font-size: 1.05rem; padding: 16px 36px;">
+        <a href="mailto:contact@zaitxcode.com?subject=Project%20Inquiry%20-%20ZaitXCode" class="btn-primary btn-contact">
           <i class="bi bi-envelope-paper-fill"></i>
           <span>Send Project Inquiry</span>
         </a>
@@ -124,7 +150,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" data-reveal>
     <div class="container footer-content">
       <div class="footer-brand">
         <img src="logo.png" alt="ZaitXCode Logo">
@@ -132,11 +158,11 @@
       </div>
 
       <div>
-        <span>Developer Docs: <a href="https://docs.zaitxcode.com" style="color: var(--accent-blue); text-decoration: none;">docs.zaitxcode.com</a></span>
+        <span>Developer Docs: <a href="https://docs.zaitxcode.com" class="footer-link docs-link">docs.zaitxcode.com</a></span>
       </div>
 
       <div>
-        <span>Contact: <a href="mailto:contact@zaitxcode.com" style="color: var(--text-primary); text-decoration: none;">contact@zaitxcode.com</a></span>
+        <span>Contact: <a href="mailto:contact@zaitxcode.com" class="footer-link mail-link">contact@zaitxcode.com</a></span>
       </div>
 
       <div>
@@ -144,6 +170,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="script.js" defer></script>
 
 </body>
 </html>
