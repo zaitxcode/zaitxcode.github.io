@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZaitXCode — Enterprise Mobile & Software Engineering</title>
-  <meta name="description" content="ZaitXCode is an enterprise software engineering company specializing in high-performance Android native frameworks, Flutter bridges, and cloud developer tools.">
+  <title>ZaitXCode — Software Development & Engineering Services</title>
+  <meta name="description" content="ZaitXCode is a software engineering agency specializing in custom mobile applications, enterprise SDKs, cloud backend solutions, and software development services.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossOrigin="anonymous">
@@ -20,15 +20,14 @@
     </a>
 
     <ul class="nav-links">
-      <li><a href="#overview" class="nav-link">Overview</a></li>
-      <li><a href="#flagship" class="nav-link">Products</a></li>
-      <li><a href="#pillars" class="nav-link">Engineering</a></li>
-      <li><a href="https://github.com/zaitxcode" target="_blank" class="nav-link"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="https://docs.zaitxcode.com" target="_blank" class="nav-link">Documentation Portal</a></li>
+      <li><a href="#contact" class="nav-link">Contact Us</a></li>
     </ul>
 
-    <a href="https://docs.zaitxcode.com" class="nav-cta">
-      <span>Documentation Portal</span>
-      <i class="bi bi-arrow-right"></i>
+    <a href="mailto:contact@zaitxcode.com" class="nav-cta">
+      <i class="bi bi-envelope-fill"></i>
+      <span>contact@zaitxcode.com</span>
     </a>
   </header>
 
@@ -36,120 +35,89 @@
   <div class="container">
 
     <!-- Hero Section -->
-    <section id="overview" class="hero-section">
+    <section class="hero-section">
       <div class="badge-pill">
         <span class="dot-green"></span>
-        <span>ZaitXCode Software Engineering Hub</span>
+        <span>Software Engineering &amp; Development Services</span>
       </div>
 
       <h1 class="hero-title">
-        Engineering High-Performance<br>Mobile Frameworks & Developer Tools.
+        We Build High-Performance<br>Custom Software &amp; Applications.
       </h1>
 
       <p class="hero-subtitle">
-        ZaitXCode is an enterprise software technology company building production-grade native Android frameworks, cross-platform Flutter bridges, high-security SDKs, and developer-first infrastructure.
+        ZaitXCode provides end-to-end software development services — from enterprise mobile applications (Android &amp; iOS/Flutter) to custom SDKs, backend APIs, and secure cloud infrastructure.
       </p>
 
       <div class="hero-actions">
-        <a href="https://docs.zaitxcode.com" class="btn-primary">
+        <a href="mailto:contact@zaitxcode.com?subject=Project%20Inquiry%20-%20ZaitXCode" class="btn-primary">
+          <i class="bi bi-send-fill"></i>
+          <span>Request Custom Software Development</span>
+        </a>
+        <a href="https://docs.zaitxcode.com" target="_blank" class="btn-secondary">
           <i class="bi bi-book-half"></i>
-          <span>Explore Documentation Portal</span>
-        </a>
-        <a href="https://github.com/zaitxcode" target="_blank" class="btn-secondary">
-          <i class="fa-brands fa-github"></i>
-          <span>View GitHub Repositories</span>
+          <span>Developer Docs Portal →</span>
         </a>
       </div>
     </section>
 
-    <!-- Flagship Product Section -->
-    <section id="flagship" class="section">
+    <!-- Services Grid -->
+    <section id="services" class="section">
       <div class="section-header">
-        <span class="section-tag">Flagship Framework</span>
-        <h2 class="section-title">Open Source Android Utility Core</h2>
-      </div>
-
-      <div class="flagship-card">
-        <div>
-          <span class="flagship-badge">
-            <i class="bi bi-check-circle-fill"></i> Stable Release v1.0.0-alpha02
-          </span>
-          <h3 class="flagship-title">Android Helper Framework</h3>
-          <p class="flagship-desc">
-            A lightweight, enterprise-grade Kotlin &amp; Flutter utility framework under <code>com.zaitxcode.android.*</code>. Provides unified, clean APIs for Network diagnostics, Audio, Vibration, Biometric authentication, Secure Intents, Notifications, Cryptography, and Storage.
-          </p>
-
-          <div class="pills-bar">
-            <span class="pill-item">Android 17 (API 37) Ready</span>
-            <span class="pill-item">Kotlin Coroutines &amp; DataStore</span>
-            <span class="pill-item">Flutter MethodChannel Bridge</span>
-            <span class="pill-item">Zero Core Dependencies</span>
-          </div>
-
-          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="https://docs.zaitxcode.com/androidhelper/" class="btn-primary" style="font-size: 0.9rem; padding: 10px 20px;">
-              <span>Read Documentation (EN)</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-            <a href="https://docs.zaitxcode.com/androidhelper/ar/" class="btn-secondary" style="font-size: 0.9rem; padding: 10px 20px;">
-              <span>التوثيق العربي</span>
-              <i class="bi bi-translate"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="code-preview-box">
-          <span class="code-comment">// 1. Add Dependency (gradle/libs.versions.toml)</span><br>
-          <span class="code-keyword">[versions]</span><br>
-          androidHelper = <span class="code-string">"1.0.0-alpha02"</span><br><br>
-          <span class="code-keyword">[libraries]</span><br>
-          androidhelper = { group = <span class="code-string">"com.github.zaitxcode"</span>, name = <span class="code-string">"androidhelper"</span>, version.ref = <span class="code-string">"androidHelper"</span> }<br><br>
-          <span class="code-comment">// 2. Initialize in Application Class</span><br>
-          <span class="code-keyword">import</span> com.zaitxcode.android.core.AppHelper<br><br>
-          <span class="code-keyword">class</span> <span class="code-type">ExampleApplication</span> : <span class="code-type">Application</span>() {<br>
-          &nbsp;&nbsp;<span class="code-keyword">override fun</span> <span class="code-type">onCreate</span>() {<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">super</span>.onCreate()<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-type">AppHelper</span>.<span class="code-type">initialize</span>(<span class="code-keyword">this</span>)<br>
-          &nbsp;&nbsp;}<br>
-          }
-        </div>
-      </div>
-    </section>
-
-    <!-- Engineering Pillars Grid -->
-    <section id="pillars" class="section">
-      <div class="section-header">
-        <span class="section-tag">Engineering Standard</span>
-        <h2 class="section-title">Built for Performance, Security &amp; Scale</h2>
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">End-to-End Software Engineering</h2>
       </div>
 
       <div class="grid-3">
-        <!-- Card 1 -->
+        <!-- Service 1 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="bi bi-phone-vibrate"></i></div>
-          <h3 class="feature-title">Mobile Native Excellence</h3>
+          <div class="feature-icon"><i class="bi bi-phone-fill"></i></div>
+          <h3 class="feature-title">Custom Mobile Applications</h3>
           <p class="feature-desc">
-            Deep native Android (Kotlin, Jetpack Compose, Coroutines) and iOS expertise, optimized for system-level APIs and low latency.
+            Production-grade native Android (Kotlin) and cross-platform (Flutter) mobile applications engineered for high performance, smooth UI, and scalability.
           </p>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Service 2 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="bi bi-layers-half"></i></div>
-          <h3 class="feature-title">Cross-Platform Bridges</h3>
+          <div class="feature-icon"><i class="bi bi-code-slash"></i></div>
+          <h3 class="feature-title">Custom SDKs &amp; Libraries</h3>
           <p class="feature-desc">
-            High-speed MethodChannel and interop bridges connecting Flutter and cross-platform Dart runtimes directly with native platform features.
+            Specialized SDKs, native interop bridges, and reusable utility frameworks tailored to your business needs and technical requirements.
           </p>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Service 3 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
-          <h3 class="feature-title">Security &amp; Cryptography</h3>
+          <div class="feature-icon"><i class="bi bi-cloud-check-fill"></i></div>
+          <h3 class="feature-title">Cloud Backends &amp; APIs</h3>
           <p class="feature-desc">
-            Hardware-backed Biometric authentication, AES encryption, SHA-1/SHA-256 digital signature checks, and secure IPC Intents.
+            Robust microservices, REST &amp; GraphQL APIs, database architectures, and secure cloud infrastructure optimized for enterprise workloads.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Contact & Project Inquiries Section -->
+    <section id="contact" class="section">
+      <div class="contact-card">
+        <div className="contact-badge">
+          <i className="bi bi-chat-left-dots-fill"></i> Start a Project
+        </div>
+        <h2 class="contact-title">Have a Software Project in Mind?</h2>
+        <p class="contact-desc">
+          Whether you need a new mobile app, a custom SDK, or software architecture consultation, we are ready to build it. Reach out directly to discuss your project requirements.
+        </p>
+
+        <div class="contact-email-box">
+          <i class="bi bi-envelope-at-fill" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
+          <span class="email-text">contact@zaitxcode.com</span>
+        </div>
+
+        <a href="mailto:contact@zaitxcode.com?subject=Project%20Inquiry%20-%20ZaitXCode" class="btn-primary" style="font-size: 1.05rem; padding: 16px 36px;">
+          <i class="bi bi-envelope-paper-fill"></i>
+          <span>Send Project Inquiry</span>
+        </a>
       </div>
     </section>
 
@@ -164,7 +132,11 @@
       </div>
 
       <div>
-        <span>Documentation Portal: <a href="https://docs.zaitxcode.com" style="color: var(--accent-blue); text-decoration: none;">docs.zaitxcode.com</a></span>
+        <span>Developer Docs: <a href="https://docs.zaitxcode.com" style="color: var(--accent-blue); text-decoration: none;">docs.zaitxcode.com</a></span>
+      </div>
+
+      <div>
+        <span>Contact: <a href="mailto:contact@zaitxcode.com" style="color: var(--text-primary); text-decoration: none;">contact@zaitxcode.com</a></span>
       </div>
 
       <div>
