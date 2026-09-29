@@ -1,0 +1,15 @@
+{
+  "name": "zaitxcode-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker — USD/EGP exchange rate API for zaitxcode.com",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.91.0"
+  }
+}

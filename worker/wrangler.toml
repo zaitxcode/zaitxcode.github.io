@@ -1,0 +1,20 @@
+name = "zaitxcode-api"
+main = "src/index.js"
+compatibility_date = "2025-07-18"
+
+# قواعد المسارات (Routes) — اربطها بنطاقك على Cloudflare
+# routes = [
+#   { pattern = "zaitxcode.com/*", zone_name = "zaitxcode.com" }
+# ]
+
+[vars]
+# سعر الصرف الاحتياطي (يُستخدم عند فشل كل المصادر)
+FALLBACK_RATE = "56.16"
+# المدة بالثواني للتخزين المؤقت للاستجابة (10 دقائق)
+CACHE_TTL = "600"
+# المهلة القصوى لطلب المصدر الخارجي (مللي ثانية)
+UPSTREAM_TIMEOUT_MS = "8000"
+# مصدر السعر الأساسي
+PRIMARY_SOURCE = "https://open.er-api.com/v6/latest/USD"
+# مصدر احتياطي
+SECONDARY_SOURCE = "https://api.exchangerate-api.com/v4/latest/USD"
